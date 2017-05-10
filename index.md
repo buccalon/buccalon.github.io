@@ -4,5 +4,7 @@ Architecture student at Escola da Cidade, currently based in São Paulo working 
 
 Estudante de arquitetura na Escola da Cidade, vivendo no Rio de Janeiro e estagiando no [Instituto Moreira Salles](https://ims.com.br). Fundou o [Baú](http://escoladacidade.org/bau/), um arquivo digital de palestras sobre arquitetura. Foi coorganizador do [TEDx São Paulo](https://www.youtube.com/watch?v=Lws6N6hQzXo), e também atuou como produtor cultural freelance. Depois da graduação pretende estudar arquivos e cultura digital.
 
+<img src="rio.jpg">
+
 
 
