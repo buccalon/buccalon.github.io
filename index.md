@@ -1,37 +1,8 @@
-## Welcome to GitHub Pages
+## Bruno Buccalon
 
-You can use the [editor on GitHub](https://github.com/buccalon/buccalon.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+Architecture student at Escola da Cidade, currently based in São Paulo working at [Instituto Moreira Salles](https://ims.com.br). Founder of [Baú](http://escoladacidade.org/bau/), a digital archive of lectures on architecture. Former co-host of [TEDx São Paulo](https://www.youtube.com/watch?v=Lws6N6hQzXo), also worked as arts & culture freelance producer. After graduating aims to study archives and digital culture.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Estudante de arquitetura na Escola da Cidade, vivendo no Rio de Janeiro e estagiando no [Instituto Moreira Salles](https://ims.com.br). Fundou o [Baú](http://escoladacidade.org/bau/), um arquivo digital de palestras sobre arquitetura. Foi coorganizador do [TEDx São Paulo](https://www.youtube.com/watch?v=Lws6N6hQzXo), e também atuou como produtor cultural freelance. Depois da graduação pretende estudar arquivos e cultura digital.
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/buccalon/buccalon.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
