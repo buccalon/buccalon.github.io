@@ -1,10 +1,9 @@
 ## Bruno Buccalon
 
-B.A. in Architecture and Urban Planning at Escola da Cidade (Sāo Paulo). Currently based in Rio de Janeiro, working at the photo deparment of [Instituto Moreira Salles](https://ims.com.br). Founder of [Baú](http://escoladacidade.org/bau/), a digital archive of lectures on architecture. Former co-host of [TEDx São Paulo](https://www.youtube.com/watch?v=Lws6N6hQzXo), have experience as arts & culture producer. Studies archives and digital culture.
+Technical assistant at the [Instituto Moreira Salles](https://ims.com.br)' photography department, currently [working with Rice University](https://hrc.rice.edu/situatedviews/). Holds a BA in Archictecture and Urban Planing from [Associação Escola da Cidade](http://escoladacidade.org/) (2017). Studies archives and visual culture.
 
-Graduado em arquitetura e urbanismo pela Escola da Cidade (São Paulo). Vive no Rio de Janeiro, trabalhando no departamento de fotografia do [Instituto Moreira Salles](https://ims.com.br). Fundou o [Baú](http://escoladacidade.org/bau/), um arquivo digital de palestras sobre arquitetura. Foi coorganizador do [TEDx São Paulo](https://www.youtube.com/watch?v=Lws6N6hQzXo), e tem experiência como produtor cultural. Estuda arquivos e cultura digital.
+*Assistente técnico na coordenação de fotografia do Instituto Moreira Salles, atualmente trabalha em parceria com a Universidade de Rice. Graduado em arquitetura e urbanismo pela Associação Escola da Cidade (2017). Estuda arquivos e cultura visual.*
 
 <img src="rio.jpg" class="inline"/>
-
 
 
