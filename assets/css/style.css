@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Plex';
+    src: url('ibm-plex-mono-regular.woff2') format('woff2'),
+         url('ibm-plex-mono-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  body {
+    font-family: Plex, serif;
+  }
