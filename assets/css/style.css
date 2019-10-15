@@ -7,5 +7,41 @@
   }
   
   body {
+    width: 100%;
     font-family: Plex, serif;
+    line-height: 2em;
+    font-size: small;
   }
+  
+  @media only screen and (min-width: 768px) {
+    body {width: 50%;}
+  }
+  
+  section.card {
+    width: min-content;
+    margin: 100px auto;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+    border-bottom: black 1px dashed ;
+  }
+  
+  a:hover {
+    color: olive;
+    border-bottom: olive 1px dashed ;
+  }
+
+  h1 {
+    border-bottom-width: 2pt;
+    border-bottom-style: solid;
+  }
+
+  p.small {
+    font-size: smaller;
+    color: darkgrey;
+  }
+
+
+  
