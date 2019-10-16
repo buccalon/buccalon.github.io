@@ -7,19 +7,20 @@
   }
   
   body {
-    width: 100%;
-    font-family: Plex, serif;
+    font-family: Plex, 'Courier New', Courier, monospace;
     line-height: 2em;
     font-size: small;
   }
   
-  @media only screen and (min-width: 768px) {
-    body {width: 50%;}
+  .wrapper {
+    display: grid;
+    grid-template-columns: auto [content] 500px auto;
   }
-  
-  section.card {
-    width: min-content;
-    margin: 100px auto;
+
+  @media screen and (max-width: 500px) {
+    .wrapper {
+      grid-template-columns: auto [content] 100% auto;
+    }
   }
 
   a {
@@ -33,9 +34,20 @@
     border-bottom: olive 1px dashed ;
   }
 
+  img {
+    grid-column: content;
+    width: 100%;
+    height: auto;
+  }
+
   h1 {
+    grid-column: content;
     border-bottom-width: 2pt;
     border-bottom-style: solid;
+  }
+
+  p {
+    grid-column: content;
   }
 
   p.small {
