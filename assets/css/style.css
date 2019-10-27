@@ -8,13 +8,22 @@
   
   body {
     font-family: Plex, 'Courier New', Courier, monospace;
+    color: whitesmoke;
     line-height: 2em;
-    font-size: small;
+    font-size: medium;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
   }
   
   .wrapper {
     display: grid;
     grid-template-columns: auto [content] 500px auto;
+    position: absolute;
+    padding: 2%;
+    margin: 2%;
+    background-color: rgba(0, 0, 0, 0.7);
   }
 
   @media screen and (max-width: 500px) {
@@ -24,14 +33,14 @@
   }
 
   a {
-    color: black;
+    color: white;
     text-decoration: none;
-    border-bottom: black 1px dashed ;
+    border-bottom: rgb(255, 255, 255) 1px dashed ;
   }
   
   a:hover {
-    color: olive;
-    border-bottom: olive 1px dashed ;
+    color: rgb(200, 200, 0);
+    border-bottom: rgb(200, 200, 0) 1px dashed ;
   }
 
   img {
@@ -52,7 +61,7 @@
 
   p.small {
     font-size: smaller;
-    color: darkgrey;
+    color: rgb(173, 173, 173);
   }
 
 

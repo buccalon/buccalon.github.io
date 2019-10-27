@@ -23,8 +23,6 @@
     
     <section class="wrapper">
 
-    <img src="assets/images/rio.jpg" class="inline"/>
-
     <h1>Bruno Buccalon</h1>
     
     <p class="normal">
@@ -46,6 +44,54 @@
 
     </section>
 
-<script src="assets/js/index.js"></script>
+<script src="assets/js/three.min.js"></script>
+<script src="assets/js/OrbitControls.js"></script>
+
+<!-- Sky/Cloud boxes created by Zachery "skiingpenguins" Slocum -->
+
+<script>
+    let scene, camera, renderer;
+    function init() {
+      scene = new THREE.Scene();
+      camera = new THREE.PerspectiveCamera(60,window.innerWidth/window.innerHeight,45,30000);
+      camera.position.set(3200,-200,-900);
+      renderer = new THREE.WebGLRenderer({antialias:true});
+      renderer.setSize(window.innerWidth,window.innerHeight);
+      document.body.appendChild(renderer.domElement);
+      let controls = new THREE.OrbitControls(camera);
+      controls.addEventListener('change', renderer);
+      controls.minDistance = 100;
+      controls.maxDistance = 2500;
+      
+      let materialArray = [];
+      let texture_ft = new THREE.TextureLoader().load( './assets/images/skybox/sun_ft.jpg');
+      let texture_bk = new THREE.TextureLoader().load( './assets/images/skybox/sun_bk.jpg');
+      let texture_up = new THREE.TextureLoader().load( './assets/images/skybox/sun_up.jpg');
+      let texture_dn = new THREE.TextureLoader().load( './assets/images/skybox/sun_dn.jpg');
+      let texture_rt = new THREE.TextureLoader().load( './assets/images/skybox/sun_rt.jpg');
+      let texture_lf = new THREE.TextureLoader().load( './assets/images/skybox/sun_lf.jpg');
+        
+      materialArray.push(new THREE.MeshBasicMaterial( { map: texture_ft }));
+      materialArray.push(new THREE.MeshBasicMaterial( { map: texture_bk }));
+      materialArray.push(new THREE.MeshBasicMaterial( { map: texture_up }));
+      materialArray.push(new THREE.MeshBasicMaterial( { map: texture_dn }));
+      materialArray.push(new THREE.MeshBasicMaterial( { map: texture_rt }));
+      materialArray.push(new THREE.MeshBasicMaterial( { map: texture_lf }));
+ 
+      for (let i = 0; i < 6; i++)
+         materialArray[i].side = THREE.BackSide;
+      let skyboxGeo = new THREE.BoxGeometry( 10000, 10000, 10000);
+      let skybox = new THREE.Mesh( skyboxGeo, materialArray );
+      scene.add( skybox );  
+      animate();
+    }
+    function animate() {
+      renderer.render(scene,camera);
+      requestAnimationFrame(animate);
+    }
+    init();
+  </script>
+
+
 </body>
 </html>
