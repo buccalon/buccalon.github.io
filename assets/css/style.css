@@ -27,8 +27,14 @@
   }
 
   @media screen and (max-width: 500px) {
+    body {
+      background: black;
+    }
     .wrapper {
       grid-template-columns: auto [content] 100% auto;
+    }
+    canvas {
+      display: none;
     }
   }
 
