@@ -8,7 +8,7 @@ export const getDatabase = async () => {
   return response;
 };
 
-export const getPosts = async () => {
+export const getItemsByType = async (type, sort) => {
   const databaseId = process.env.NOTION_DB;
   const response = await notion.databases.query({
     database_id: databaseId,
@@ -23,14 +23,14 @@ export const getPosts = async () => {
         {
           property: "type",
           select: {
-            equals: "post",
+            equals: type,
           },
         },
       ],
     },
     sorts: [
       {
-        property: "date",
+        property: sort,
         direction: "ascending",
       },
     ],
