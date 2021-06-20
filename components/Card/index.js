@@ -1,67 +1,27 @@
-import { Box, Image, Badge, StarIcon } from "@chakra-ui/react";
+import { Box, Heading, Text, Divider } from "@chakra-ui/react";
+import { LinkBox, LinkOverlay } from "@chakra-ui/react";
 
 export default function Card() {
-  const property = {
-    imageUrl: "https://bit.ly/2Z4KKcF",
-    imageAlt: "Rear view of modern home with pool",
-    beds: 3,
-    baths: 2,
-    title: "Airbnb example from Chakra UI",
-    formattedPrice: "$1,900.00",
-    reviewCount: 34,
-    rating: 4,
+  const project = {
+    title: "Projeto #1",
+    description: "Lorem ipsum",
+    date: "2017",
+    tags: ["design", "code"],
   };
 
   return (
-    <Box
-      maxW="lg"
-      borderWidth="1px"
-      borderRadius="lg"
-      overflow="hidden"
-      bgColor="white"
-    >
-      <Image src={property.imageUrl} alt={property.imageAlt} />
+    <Box overflow="hidden" bgColor="white">
+      <LinkBox as="article" p="5" borderWidth="1px" rounded="md">
+        <Heading size="md" my="2">
+          <LinkOverlay href="#">{project.title}</LinkOverlay>
+        </Heading>
+        <Text mb="3">{project.description}</Text>
 
-      <Box p="6">
-        <Box d="flex" alignItems="baseline">
-          <Badge borderRadius="full" px="2" colorScheme="teal">
-            New
-          </Badge>
-          <Box
-            color="gray.500"
-            fontWeight="semibold"
-            letterSpacing="wide"
-            fontSize="xs"
-            textTransform="uppercase"
-            ml="2"
-          >
-            {property.beds} beds &bull; {property.baths} baths
-          </Box>
+        <Box as="time" dateTime="2021-01-15 15:30:00 +0000 UTC">
+          {project.date}
         </Box>
-
-        <Box
-          mt="1"
-          fontWeight="semibold"
-          as="h4"
-          lineHeight="tight"
-          isTruncated
-        >
-          {property.title}
-        </Box>
-
-        <Box>
-          {property.formattedPrice}
-          <Box as="span" color="gray.600" fontSize="sm">
-            / wk
-          </Box>
-        </Box>
-
-        <Box d="flex" mt="2" alignItems="center">
-          <Box as="span" ml="2" color="gray.600" fontSize="sm">
-            {property.reviewCount} reviews
-          </Box>
-        </Box>
-      </Box>
+      </LinkBox>
+      <Divider orientation="horizontal" />
     </Box>
   );
 }
