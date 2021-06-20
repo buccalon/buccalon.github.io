@@ -1,62 +1,46 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import Head from "next/head";
-import Card from "../components/Card";
-import { getItemsByType } from "../utils/notion";
-import {
-  Box,
-  Container,
-  Text,
-  Tag,
-  Flex,
-  UnorderedList,
-  Spacer,
-} from "@chakra-ui/react";
+import Sidebar from "../components/Sidebar";
+import Header from "../components/Header";
+import List from "../components/List";
 
-export async function getServerSideProps() {
-  const data = await getItemsByType("post", "date");
+import { Grid } from "@chakra-ui/react";
+
+// import { getItemsByType } from "../utils/notion";
+
+/* export async function getServerSideProps() {
+  const data = await getItemsByType("project", "date");
   return {
     props: {
       data,
     },
   };
-}
+} */
 
-export default function Home({ data }) {
-  const [items, setItems] = useState(data);
+export default function Home() {
+  /*   const [items, setItems] = useState(data);
+   */
 
-  console.log(data);
+  const title = "Bruno Buccalon";
+  const subtitle =
+    "An architect writing about environmental history at Rice University.";
+
   return (
     <div>
       <Head>
-        <title>Brunoland</title>
+        <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Box overflow="hidden" bg="green.100" minH="100vh">
-        <Container>
-          <Text
-            color="cyan.900"
-            fontWeight="semibold"
-            m="2rem"
-            textAlign="center"
-            fontSize={["4xl", "4xl", "5xl", "5xl"]}
-          >
-            Hello World!
-          </Text>
-          <UnorderedList spacing={4}>
-            {items.map((item) => (
-              <Flex bg="cyan.900" h="60px" color="green.100" borderRadius="md">
-                <Box p="4">{item.properties.title.title[0].plain_text}</Box>
-                <Spacer />
-                <Box p="4">
-                  <Tag>{item.properties.date.date.start}</Tag>
-                </Box>
-              </Flex>
-            ))}
 
-            <Card />
-          </UnorderedList>
-        </Container>
-      </Box>
+      <Grid
+        h="100vh"
+        templateRows={["1fr 0.5fr 2fr", "1fr 0.5fr 2fr", "1fr 1fr"]}
+        templateColumns={["1fr", "1fr", "1fr 2fr"]}
+      >
+        <Sidebar />
+        <Header title={title} subtitle={subtitle} />
+        <List />
+      </Grid>
     </div>
   );
 }
