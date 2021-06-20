@@ -1,12 +1,25 @@
-import { Box, Heading, Text, Divider } from "@chakra-ui/react";
-import { LinkBox, LinkOverlay } from "@chakra-ui/react";
+import Link from "next/link";
+import {
+  Box,
+  Heading,
+  Text,
+  Flex,
+  Spacer,
+  HStack,
+  VStack,
+  Badge,
+  LinkBox,
+  LinkOverlay,
+} from "@chakra-ui/react";
 
 export default function Card() {
   const project = {
-    title: "Projeto #1",
-    description: "Lorem ipsum",
-    date: "2017",
+    title: "Project",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+    date: "2021",
     tags: ["design", "code"],
+    slug: "slug",
   };
 
   return (
@@ -15,13 +28,41 @@ export default function Card() {
       _hover={{ bg: "yellow.200", cursor: "pointer" }}
     >
       <LinkBox as="article" p="5">
-        <Heading size="md" my="2">
-          <LinkOverlay href="#">{project.title}</LinkOverlay>
-        </Heading>
-        <Text mb="3">{project.description}</Text>
-        <Box as="time" dateTime="2021-01-15 15:30:00 +0000 UTC">
-          {project.date}
-        </Box>
+        <Flex>
+          <VStack spacing={4} align="stretch">
+            <Heading fontFamily="Lora" fontWeight="900" size="sm">
+              <Link
+                href={{
+                  pathname: "/page/[slug]",
+                  query: { slug: project.slug },
+                }}
+                passHref
+              >
+                <LinkOverlay>{project.title}</LinkOverlay>
+              </Link>
+            </Heading>
+            <Text
+              size="sm"
+              fontWeight="100"
+              maxW={[200, 300, 400, 600]}
+              isTruncated
+            >
+              {project.description}
+            </Text>
+          </VStack>
+          <Spacer />
+          <VStack spacing={4} align="stretch" textAlign="right">
+            <Text fontWeight="400">{project.date}</Text>
+            <HStack spacing={1}>
+              <Badge size="sm" colorScheme="blackAlpha" variant="outline">
+                Design
+              </Badge>
+              <Badge size="sm" colorScheme="blackAlpha" variant="outline">
+                Coding
+              </Badge>
+            </HStack>
+          </VStack>
+        </Flex>
       </LinkBox>
     </Box>
   );

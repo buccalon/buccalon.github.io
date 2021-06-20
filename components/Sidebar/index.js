@@ -5,7 +5,7 @@ export default function Sidebar() {
     <GridItem
       rowSpan={[1, 1, 2]}
       colSpan={1}
-      bgImage="url('images/bg.jpg')"
+      bgImage="url('/images/bg.jpg')"
       bgPosition="center"
       bgRepeat="no-repeat"
       bgSize="cover"
@@ -15,5 +15,3 @@ export default function Sidebar() {
     ></GridItem>
   );
 }
-
-// To-do: Turn top image on mobile devices

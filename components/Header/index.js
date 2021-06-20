@@ -1,4 +1,12 @@
-import { GridItem, Container, Heading, Text } from "@chakra-ui/react";
+import Link from "next/link";
+import {
+  GridItem,
+  Container,
+  Heading,
+  Text,
+  IconButton,
+} from "@chakra-ui/react";
+import { EmailIcon } from "@chakra-ui/icons";
 
 export default function Header({ title, subtitle }) {
   return (
@@ -15,6 +23,16 @@ export default function Header({ title, subtitle }) {
         <Text fontWeight="light" m={2} fontSize={["md", "lg", "xl", "2xl"]}>
           {subtitle}
         </Text>
+
+        <a href="mailto:buccalon@rice.edu" target="_blank">
+          <IconButton
+            m={2}
+            variant="ghost"
+            colorScheme="gray"
+            aria-label="Send email"
+            icon={<EmailIcon />}
+          />
+        </a>
       </Container>
     </GridItem>
   );

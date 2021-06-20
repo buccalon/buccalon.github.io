@@ -1,10 +1,8 @@
 // import React, { useState } from "react";
 import Head from "next/head";
-import Sidebar from "../components/Sidebar";
+import Layout from "../components/Layout";
 import Header from "../components/Header";
 import List from "../components/List";
-
-import { Grid } from "@chakra-ui/react";
 
 // import { getItemsByType } from "../utils/notion";
 
@@ -22,8 +20,7 @@ export default function Home() {
    */
 
   const title = "Bruno Buccalon";
-  const subtitle =
-    "An architect writing about environmental history at Rice University.";
+  const subtitle = "Graduate Student at Rice University";
 
   return (
     <div>
@@ -32,15 +29,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Grid
-        h="100vh"
-        templateRows={["0.5fr 0.5fr 2fr", "1fr 0.5fr 2fr", "1fr 1fr"]}
-        templateColumns={["1fr", "1fr", "1fr 2fr"]}
-      >
-        <Sidebar />
+      <Layout>
         <Header title={title} subtitle={subtitle} />
         <List />
-      </Grid>
+      </Layout>
     </div>
   );
 }
