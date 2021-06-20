@@ -10,18 +10,19 @@ export default function Card() {
   };
 
   return (
-    <Box overflow="hidden" bgColor="white">
-      <LinkBox as="article" p="5" borderWidth="1px" rounded="md">
+    <Box
+      style={{ transition: "background 300ms" }}
+      _hover={{ bg: "yellow.200", cursor: "pointer" }}
+    >
+      <LinkBox as="article" p="5">
         <Heading size="md" my="2">
           <LinkOverlay href="#">{project.title}</LinkOverlay>
         </Heading>
         <Text mb="3">{project.description}</Text>
-
         <Box as="time" dateTime="2021-01-15 15:30:00 +0000 UTC">
           {project.date}
         </Box>
       </LinkBox>
-      <Divider orientation="horizontal" />
     </Box>
   );
 }

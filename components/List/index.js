@@ -1,27 +1,21 @@
-import { GridItem } from "@chakra-ui/react";
+import { GridItem, VStack, StackDivider } from "@chakra-ui/react";
 
 import Card from "../Card";
 
 export default function List() {
   return (
-    <GridItem colSpan={1}>
-      <Card />
-      {/* <UnorderedList spacing={4}>
-              {items.map((item) => (
-                <Flex
-                  bg="cyan.900"
-                  h="60px"
-                  color="green.100"
-                  borderRadius="md"
-                >
-                  <Box p="4">{item.properties.title.title[0].plain_text}</Box>
-                  <Spacer />
-                  <Box p="4">
-                    <Tag>{item.properties.date.date.start}</Tag>
-                  </Box>
-                </Flex>
-              ))}
-            </UnorderedList>*/}
+    <GridItem colSpan={1} w="full" overflowY="auto">
+      <VStack
+        divider={<StackDivider borderColor="gray.200" />}
+        spacing={0}
+        align="stretch"
+      >
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </VStack>
     </GridItem>
   );
 }
