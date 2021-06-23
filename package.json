@@ -1,5 +1,5 @@
 {
-  "name": "buccalon",
+  "name": "brunoland",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -18,6 +18,7 @@
     "framer-motion": "^4.1.17",
     "next": "11.0.0",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-icons": "^4.2.0"
   }
 }

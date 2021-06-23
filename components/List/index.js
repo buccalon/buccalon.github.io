@@ -11,13 +11,7 @@ export default function List() {
         align="stretch"
       >
         <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
       </VStack>
     </GridItem>
   );
 }
-
-// To-do: Turn top image on mobile devices

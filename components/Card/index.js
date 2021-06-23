@@ -14,7 +14,7 @@ import {
 
 export default function Card() {
   const project = {
-    title: "Project",
+    title: "Sample Project",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     date: "2021",
@@ -54,10 +54,18 @@ export default function Card() {
           <VStack spacing={4} align="stretch" textAlign="right">
             <Text fontWeight="400">{project.date}</Text>
             <HStack spacing={1}>
-              <Badge size="sm" colorScheme="blackAlpha" variant="outline">
+              <Badge
+                fontSize="0.7em"
+                colorScheme="blackAlpha"
+                variant="outline"
+              >
                 Design
               </Badge>
-              <Badge size="sm" colorScheme="blackAlpha" variant="outline">
+              <Badge
+                fontSize="0.7em"
+                colorScheme="blackAlpha"
+                variant="outline"
+              >
                 Coding
               </Badge>
             </HStack>
