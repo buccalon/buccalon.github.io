@@ -1,11 +1,18 @@
-import { GridItem, Container, Heading, Text } from "@chakra-ui/react";
+import { GridItem, VStack, Spacer, Heading, Text } from "@chakra-ui/react";
 
 import Social from "../Social";
 
 export default function Header({ title, subtitle }) {
   return (
     <GridItem colSpan={1} borderBottom="2px" borderColor="black">
-      <Container p={[4, 4, 18, 18]} m={0} textAlign="left" h="100%" w="100%">
+      <VStack
+        p={["1em", "1em", "2em", "2em"]}
+        m={0}
+        align="left"
+        h="100%"
+        w="100%"
+      >
+        <Spacer />
         <Heading
           as="h1"
           fontSize={["2xl", "2xl", "3xl", "4xl"]}
@@ -18,7 +25,7 @@ export default function Header({ title, subtitle }) {
           {subtitle}
         </Text>
         <Social />
-      </Container>
+      </VStack>
     </GridItem>
   );
 }

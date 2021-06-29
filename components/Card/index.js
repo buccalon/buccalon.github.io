@@ -27,7 +27,7 @@ export default function Card() {
       style={{ transition: "background 300ms" }}
       _hover={{ bg: "yellow.200", cursor: "pointer" }}
     >
-      <LinkBox as="article" p="5">
+      <LinkBox as="article" p={["1em", "1em", "2em", "2em"]}>
         <Flex>
           <VStack spacing={4} align="stretch">
             <Heading fontFamily="Lora" fontWeight="900" size="sm">
