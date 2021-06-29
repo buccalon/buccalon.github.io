@@ -1,6 +1,6 @@
 import { GridItem, Container, Heading, Text } from "@chakra-ui/react";
 
-import Links from "../Links";
+import Social from "../Social";
 
 export default function Header({ title, subtitle }) {
   return (
@@ -17,7 +17,7 @@ export default function Header({ title, subtitle }) {
         <Text fontWeight="light" m={2} fontSize={["md", "lg", "xl", "2xl"]}>
           {subtitle}
         </Text>
-        <Links />
+        <Social />
       </Container>
     </GridItem>
   );

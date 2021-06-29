@@ -33,7 +33,7 @@ export default function Card() {
             <Heading fontFamily="Lora" fontWeight="900" size="sm">
               <Link
                 href={{
-                  pathname: "/page/[slug]",
+                  pathname: "/[slug]",
                   query: { slug: project.slug },
                 }}
                 passHref

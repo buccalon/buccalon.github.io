@@ -3,6 +3,7 @@ import Head from "next/head";
 import Layout from "../components/Layout";
 import Header from "../components/Header";
 import List from "../components/List";
+import siteConfig from "../site.config";
 
 // import { getItemsByType } from "../utils/notion";
 
@@ -19,18 +20,15 @@ export default function Home() {
   /*   const [items, setItems] = useState(data);
    */
 
-  const title = "Bruno Buccalon";
-  const subtitle = "Graduate Student at Rice University";
-
   return (
     <div>
       <Head>
-        <title>{title}</title>
+        <title>{siteConfig.title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Layout>
-        <Header title={title} subtitle={subtitle} />
+        <Header title={siteConfig.title} subtitle={siteConfig.description} />
         <List />
       </Layout>
     </div>

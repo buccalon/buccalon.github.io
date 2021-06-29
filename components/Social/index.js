@@ -2,28 +2,29 @@ import { Container, IconButton } from "@chakra-ui/react";
 import { EmailIcon } from "@chakra-ui/icons";
 import { GoMarkGithub } from "react-icons/go";
 import { SiAcademia, SiOrcid } from "react-icons/si";
+import siteConfig from "../../site.config";
 
-export default function Links() {
+export default function Social() {
   return (
     <Container my={5} p={0}>
-      <a href="mailto:buccalon@rice.edu" target="_blank">
+      <a href={"mailto:" + siteConfig.email} target="_blank">
         <IconButton variant="link" aria-label="Email" icon={<EmailIcon />} />
       </a>
-      <a href="https://github.com/buccalon" target="_blank">
+      <a href={"https://github.com/" + siteConfig.github} target="_blank">
         <IconButton
           variant="link"
           aria-label="GitHub"
           icon={<GoMarkGithub />}
         />
       </a>
-      <a href="https://rice.academia.edu/buccalon" target="_blank">
+      <a href={siteConfig.academia} target="_blank">
         <IconButton
           variant="link"
           aria-label="Academia"
           icon={<SiAcademia />}
         />
       </a>
-      <a href="https://orcid.org/0000-0002-6463-936X" target="_blank">
+      <a href={"https://orcid.org/" + siteConfig.orcid} target="_blank">
         <IconButton variant="link" aria-label="ORCID" icon={<SiOrcid />} />
       </a>
     </Container>
