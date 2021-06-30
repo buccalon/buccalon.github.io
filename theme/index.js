@@ -7,6 +7,11 @@ const Theme = extendTheme({
     body: "Lora, sans-serif",
     heading: "Notable, sans-serif",
   },
+  colors: {
+    marker: {
+      yellow: "#f7fafc",
+    },
+  },
 });
 
 export default Theme;

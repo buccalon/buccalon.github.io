@@ -3,6 +3,7 @@ module.exports = {
   title: "Bruno Buccalon",
   description: "Graduate Student at Rice University",
   domain: "bruno.land",
+  background: "/images/bg.jpg",
 
   // social
   email: "buccalon@rice.edu",

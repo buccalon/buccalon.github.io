@@ -9,6 +9,7 @@ export default function Social() {
     <HStack>
       <a href={"mailto:" + siteConfig.email} target="_blank">
         <IconButton
+          variant="outline"
           colorScheme="gray"
           aria-label="Email"
           isRound="True"
@@ -17,6 +18,7 @@ export default function Social() {
       </a>
       <a href={"https://github.com/" + siteConfig.github} target="_blank">
         <IconButton
+          variant="outline"
           colorScheme="gray"
           aria-label="GitHub"
           isRound="True"
@@ -25,6 +27,7 @@ export default function Social() {
       </a>
       <a href={siteConfig.academia} target="_blank">
         <IconButton
+          variant="outline"
           colorScheme="gray"
           aria-label="Academia.edu"
           isRound="True"
@@ -33,6 +36,7 @@ export default function Social() {
       </a>
       <a href={"https://orcid.org/" + siteConfig.orcid} target="_blank">
         <IconButton
+          variant="outline"
           colorScheme="gray"
           aria-label="ORCID"
           isRound="True"

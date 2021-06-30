@@ -24,13 +24,15 @@ export default function Card() {
 
   return (
     <Box
-      style={{ transition: "background 300ms" }}
+      style={{ transition: "background 240ms" }}
       _hover={{ bg: "yellow.200", cursor: "pointer" }}
+      borderBottom={"1px solid"}
+      borderColor="gray.300"
     >
       <LinkBox as="article" p={["1em", "1em", "2em", "2em"]}>
         <Flex>
           <VStack spacing={4} align="stretch">
-            <Heading fontFamily="Lora" fontWeight="900" size="sm">
+            <Heading fontFamily="Lora" fontWeight="800" size="sm">
               <Link
                 href={{
                   pathname: "/[slug]",
