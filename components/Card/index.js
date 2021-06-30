@@ -25,7 +25,7 @@ export default function Card() {
   return (
     <Box
       style={{ transition: "background 240ms" }}
-      _hover={{ bg: "yellow.200", cursor: "pointer" }}
+      _hover={{ bg: "theme.featured", cursor: "pointer" }}
       borderBottom={"1px solid"}
       borderColor="gray.300"
     >

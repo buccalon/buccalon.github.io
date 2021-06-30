@@ -1,6 +1,7 @@
 import { extendTheme } from "@chakra-ui/react";
 import "@fontsource/lora";
 import "@fontsource/notable";
+import siteConfig from "../site.config";
 
 const Theme = extendTheme({
   fonts: {
@@ -8,8 +9,8 @@ const Theme = extendTheme({
     heading: "Notable, sans-serif",
   },
   colors: {
-    marker: {
-      yellow: "#f7fafc",
+    theme: {
+      featured: siteConfig.featuredColor,
     },
   },
 });

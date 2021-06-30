@@ -4,6 +4,7 @@ module.exports = {
   description: "Graduate Student at Rice University",
   domain: "bruno.land",
   background: "/images/bg.jpg",
+  featuredColor: "#EDF2F7",
 
   // social
   email: "buccalon@rice.edu",

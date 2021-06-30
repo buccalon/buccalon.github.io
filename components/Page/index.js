@@ -11,7 +11,7 @@ export default function Page({ title, content }) {
       <VStack align="stretch" spacing={4} m={4}>
         <Box
           style={{ transition: "background 300ms" }}
-          _hover={{ bg: "yellow.200", cursor: "pointer" }}
+          _hover={{ bg: "theme.featured", cursor: "pointer" }}
         >
           <Link href="/" passHref>
             <a>← Back to home</a>
