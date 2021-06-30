@@ -1,27 +1,15 @@
-// import React, { useState } from "react";
 import Head from "next/head";
+
 import Layout from "../components/Layout";
 import Header from "../components/Header";
 import List from "../components/List";
+
 import siteConfig from "../site.config";
+import { getDatabase } from "../lib/notion";
 
-import { getAllPublished } from "../utils/notion";
+export const databaseId = process.env.NOTION_DB;
 
-export const getStaticProps = async () => {
-  try {
-    const data = await getAllPublished();
-    return {
-      props: {
-        data,
-      },
-    };
-  } catch (err) {
-    console.error("page error", err);
-    throw err;
-  }
-};
-
-export default function Home({ data }) {
+export default function Home({ pages }) {
   return (
     <div>
       <Head>
@@ -35,8 +23,23 @@ export default function Home({ data }) {
 
       <Layout>
         <Header title={siteConfig.title} subtitle={siteConfig.description} />
-        <List data={data} />
+        <List pages={pages} />
       </Layout>
     </div>
   );
 }
+
+export const getStaticProps = async () => {
+  try {
+    const database = await getDatabase(databaseId);
+    return {
+      props: {
+        pages: database,
+      },
+      revalidate: 1,
+    };
+  } catch (err) {
+    console.error("page error", err);
+    throw err;
+  }
+};
