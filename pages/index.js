@@ -5,21 +5,23 @@ import Header from "../components/Header";
 import List from "../components/List";
 import siteConfig from "../site.config";
 
-// import { getItemsByType } from "../utils/notion";
+import { getAllPublished } from "../utils/notion";
 
-/* export async function getServerSideProps() {
-  const data = await getItemsByType("project", "date");
-  return {
-    props: {
-      data,
-    },
-  };
-} */
+export const getStaticProps = async () => {
+  try {
+    const data = await getAllPublished();
+    return {
+      props: {
+        data,
+      },
+    };
+  } catch (err) {
+    console.error("page error", err);
+    throw err;
+  }
+};
 
-export default function Home() {
-  /*   const [items, setItems] = useState(data);
-   */
-
+export default function Home({ data }) {
   return (
     <div>
       <Head>
@@ -33,7 +35,7 @@ export default function Home() {
 
       <Layout>
         <Header title={siteConfig.title} subtitle={siteConfig.description} />
-        <List />
+        <List data={data} />
       </Layout>
     </div>
   );
