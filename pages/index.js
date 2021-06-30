@@ -25,6 +25,10 @@ export default function Home() {
       <Head>
         <title>{siteConfig.title}</title>
         <link rel="icon" href="/favicon.ico" />
+
+        <meta name="description" content={siteConfig.description} />
+        <meta property="og:description" content={siteConfig.description} />
+        <meta property="og:type" content="website" />
       </Head>
 
       <Layout>
